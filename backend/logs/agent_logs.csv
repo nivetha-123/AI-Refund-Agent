@@ -1,0 +1,2 @@
+timestamp	email	order_id	decision	reason
+2026-05-29T04:15:13.617984	raj.patel@email.com	ORD-10011	DENIED	Final sale items are not refundable.
