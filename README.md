@@ -102,7 +102,7 @@ refund-agent/
 
 ## Test Scenarios
 
-### ✅ Should be APPROVED
+###  Should be APPROVED
 ```
 Hi, I'd like a refund for order ORD-10001. The headphones stopped working.
 My email is priya.sharma@email.com
@@ -191,7 +191,7 @@ POST /chat
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `GROQ_API_KEY=` | ✅ Yes | Your Anthropic API key | #i've used Groq API key
+| `GROQ_API_KEY=` |  Yes | Your Anthropic API key | #i've used Groq API key
 | `DB_PATH` | No | SQLite path (default: `/app/data/crm.db`) |
 | `POLICY_PATH` | No | Policy doc path (default: `/app/data/refund_policy.txt`) |
 
