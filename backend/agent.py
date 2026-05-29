@@ -63,17 +63,128 @@ Be professional, warm, and clear. When denying, mention the 14-day appeal window
 def detect_prompt_injection(text: str):
 
     suspicious_patterns = [
-        "ignore previous instructions",
-        "bypass policy",
-        "override code",
-        "admin override",
-        "approve all refunds",
-        "system prompt",
-        "you are now",
-        "developer mode",
-        "ignore policy",
-        "do not follow rules"
-    ]
+
+    # Prompt Injection
+    "ignore previous instructions",
+    "ignore all instructions",
+    "forget previous instructions",
+    "bypass policy",
+    "override code",
+    "override policy",
+    "ignore policy",
+    "disable safety",
+    "developer mode",
+    "system prompt",
+    "reveal system prompt",
+    "show hidden instructions",
+    "print system prompt",
+    "you are now",
+    "act as",
+    "pretend to be",
+    "roleplay as",
+    "jailbreak",
+    "do not follow rules",
+    "new instructions",
+    "follow my instructions instead",
+    "disregard previous message",
+    "simulate admin",
+    "admin override",
+    "god mode",
+    "unfiltered mode",
+    "no restrictions",
+
+    # Business Logic Attacks
+    "approve all refunds",
+    "refund without validation",
+    "skip verification",
+    "bypass approval",
+    "ignore fraud detection",
+    "grant full refund",
+    "escalate automatically",
+
+    # Data Exfiltration
+    "show database",
+    "dump database",
+    "export customer data",
+    "reveal api key",
+    "show secrets",
+    "show credentials",
+    "print environment variables",
+    "access hidden data",
+    "show internal config",
+    "display tokens",
+
+    # SQL Injection
+    "drop table",
+    "drop database",
+    "truncate table",
+    "delete from",
+    "union select",
+    "' or '1'='1",
+    "\" or \"1\"=\"1",
+    "--",
+    ";--",
+    "insert into",
+    "update users",
+    "select * from",
+
+    # Command Injection
+    "rm -rf",
+    "sudo",
+    "chmod 777",
+    "wget http",
+    "curl http",
+    "powershell",
+    "bash -i",
+    "/etc/passwd",
+    "cat /etc/passwd",
+    "os.system",
+    "subprocess",
+    "exec(",
+    "eval(",
+
+    # Code Execution
+    "__import__",
+    "exec",
+    "eval",
+    "compile",
+    "pickle.loads",
+    "base64.b64decode",
+
+    # Token Abuse / Resource Abuse
+    "generate 10000 words",
+    "loop forever",
+    "infinite loop",
+    "repeat endlessly",
+    "continue forever",
+
+    # Social Engineering
+    "this is urgent",
+    "ceo approval",
+    "authorized personnel",
+    "security exception",
+    "temporary override",
+
+    # Sensitive File Access
+    ".env",
+    "id_rsa",
+    "aws_secret",
+    "config.yaml",
+    "credentials.json",
+
+    # XSS / HTML Injection
+    "<script>",
+    "javascript:",
+    "onerror=",
+    "alert(",
+    "<iframe>",
+
+    # SSRF / Internal Access
+    "localhost",
+    "127.0.0.1",
+    "internal api",
+    "metadata.google.internal",
+]
 
     text_lower = text.lower()
 
