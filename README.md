@@ -16,6 +16,7 @@ cd refund-agent
 # 3. Launch everything
 docker compose up --build
 ```
+# 4.The SQLite database (`crm.db`) is automatically created and seeded from `seed.sql` during container startup.
 
 **App is live at:** http://localhost:8501
 - Customer chat UI: http://localhost:8501
