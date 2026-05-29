@@ -192,7 +192,7 @@ POST /chat
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `GROQ_API_KEY=` |  Yes | Your Anthropic API key | #i've used Groq API key
+| `GROQ_API_KEY=` |  Yes | Your Groq API key  | 
 | `DB_PATH` | No | SQLite path (default: `/app/data/crm.db`) |
 | `POLICY_PATH` | No | Policy doc path (default: `/app/data/refund_policy.txt`) |
 
