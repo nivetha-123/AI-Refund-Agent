@@ -11,7 +11,7 @@ cd refund-agent
 
 # 2. Set your  API key
 #This project currently uses the Groq API for LLM inference,but it is provider-agnostic and can be easily switched to OpenAI or Anthropic Claude by replacing the API key and model configuration.
-# Edit /backend/.env and add: GROQ_API_KEY=''
+# Edit /backend/.env and add: GROQ_API_KEY=your_api_key_here 
 
 # 3. Launch everything
 docker compose up --build
