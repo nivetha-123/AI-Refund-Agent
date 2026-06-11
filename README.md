@@ -196,3 +196,17 @@ POST /chat
 | `POLICY_PATH` | No | Policy doc path (default: `/app/data/refund_policy.txt`) |
 
 ---
+
+## Roadmap — Production Upgrade in Progress
+
+The current implementation uses a raw LLM function-calling loop.
+Actively upgrading to full production stack:
+
+-  LangGraph stateful graph — replacing raw loop with  StateGraph, conditional edges, human-in-the-loop node
+-  Redis + Celery — async agent task processing, session persistence across restarts
+-  JWT authentication + Redis rate limiting
+-  LangSmith observability — step-level agent tracing
+-  20-case evaluation suite — LLM-as-judge scoring
+-  Kubernetes deployment — HPA autoscaling for workers
+
+---
